@@ -1,0 +1,32 @@
+""" Função paara calcular o indice de massa corpória(imc) """
+def imc (peso,altura): # Declaração da função
+    return peso / (altura **2)
+    
+# print(f"peso: 89, altura: 1.75, imc:{imc(89, 1.75)}")
+
+#p = float(input("Qual o seu peso?").replace(',','.'))
+#a = float(input("Qual a altura?").replace(',','.'))
+#i = imc(p,a) # chamada da função
+
+#print (f"peso: {p}, altura: {a}, imc: {imc(p, a):.3f}")
+
+# Importar o PI
+from math import pi
+
+"""função que calcula a área de auma forma geometrica especifica"""
+def calcular_area(base, altura, forma):
+    if forma == "R":  #Retangulo
+        return base *altura
+    elif forma == "T": #triangulo
+        return base * altura/2
+    elif forma == "E": #elipse
+        return(base / 2) * (altura /2) * pi #número PI
+    else: #Forma desconhecida
+        return None
+        
+
+        
+# Exemplos de chamada de função calcular_area
+print(f"Retângulo 15x25: {calcular_area(15, 25, 'R')}")
+print(f"Triangulo 12x16: {calcular_area(12, 16, 'T')}")
+print(f"Triangulo 10x20: {calcular_area(10, 20, 'E')}")
